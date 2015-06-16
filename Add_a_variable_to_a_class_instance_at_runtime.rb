@@ -16,3 +16,18 @@ puts e.foo  # output: "1"
  
 f = Empty.new
 f.foo = 1   # raises NoMethodError
+
+#class << e" uses the singleton class of "e", which is an automatic subclass of Empty that has only 
+#  this single instance. Therefore we added the "foo" accessor only to "e", not to other instances of Empty. 
+#  Another way of adding a method to a singleton is:
+
+yes_no = "Yes"
+ 
+def yes_no.not
+  replace( self=="Yes" ? "No": "Yes")
+end
+ 
+#Demo:
+p yes_no.not # => "No"
+p yes_no.not # => "Yes"
+p "aaa".not  # => undefined method `not' for "aaa":String (NoMethodError)
