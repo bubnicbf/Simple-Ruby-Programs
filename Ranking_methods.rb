@@ -22,6 +22,7 @@ For each of the following ranking methods, create a function/method/procedure/su
   - Dense. (Ties share the next available integer).
   - Ordinal. ((Competitors take the next available integer. Ties are not treated otherwise).
   - Fractional. (Ties share the mean of what would have been their ordinal numbers).
+=end
   
   ar = "44 Solomon
 42 Jason
